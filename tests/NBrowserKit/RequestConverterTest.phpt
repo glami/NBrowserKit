@@ -135,8 +135,9 @@ class RequestConverterTest extends TestCase
 		$input = new BrowserKit\Request('http://example.com/', 'POST', [], $files);
 		$output = RequestConverter::convertRequest($input);
 
-		Assert::count(1, $output->getFiles());
-		$fooFiles = $output->getFile('foo');
+		$files = $output->getFiles();
+		Assert::count(1, $files);
+		$fooFiles = $files['foo'];
 		Assert::type('array', $fooFiles);
 		Assert::count(2, $fooFiles);
 		Assert::type(FileUpload::class, $fooFiles[0]);

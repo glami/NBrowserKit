@@ -47,9 +47,9 @@ class Client extends BrowserKit\AbstractBrowser
 
 
 	/**
-	 * @return BrowserKit\Response
+	 * @return object
 	 */
-	public function getResponse()
+	public function getResponse(): object
 	{
 		return parent::getResponse();
 	}
@@ -57,9 +57,9 @@ class Client extends BrowserKit\AbstractBrowser
 
 
 	/**
-	 * @return IRequest|NULL
+	 * @return object
 	 */
-	public function getRequest()
+	public function getRequest(): object
 	{
 		return parent::getRequest();
 	}
